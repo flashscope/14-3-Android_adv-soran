@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
     
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -27,6 +27,10 @@
         </activity>
         <activity
             android:name=".ui.session.SessionDetailActivity" 
+            android:label="@string/tab_session" >
+        </activity>
+        <activity
+            android:name=".ui.session.SessionDetailFragment" 
             android:label="@string/tab_session" >
         </activity>
     </application>

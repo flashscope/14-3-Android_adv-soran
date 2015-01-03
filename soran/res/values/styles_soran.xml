@@ -19,7 +19,7 @@
 
 <resources>
 
-    <style name="Theme.Soran" parent="@style/Theme.AppCompat.Light">
+    <style name="Theme.Soran" parent="Theme.AppCompat.Light">
         <item name="actionBarItemBackground">@drawable/selectable_background_soran</item>
         <item name="popupMenuStyle">@style/PopupMenu.Soran</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Soran</item>
