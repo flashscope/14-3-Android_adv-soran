@@ -16,6 +16,13 @@ import android.widget.ListView;
 
 public class SessionFragment extends Fragment {
 
+	
+	// View name of the header image. Used for activity scene transitions
+    public static final String VIEW_NAME_HEADER_IMAGE = "detail:header:image";
+
+    // View name of the header title. Used for activity scene transitions
+    public static final String VIEW_NAME_HEADER_TITLE = "detail:header:title";
+    
 	SessionAdapter mAdapter;
 	
 	@Override
@@ -33,15 +40,14 @@ public class SessionFragment extends Fragment {
 				intent.putExtra("position", position);
 				
 				
-				@SuppressWarnings("unchecked")
 				ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(
 						getActivity(),
 		                new Pair<View, String>(
 		                        view.findViewById(R.id.pvInstructor),
-		                        SessionDetailActivity.VIEW_NAME_HEADER_IMAGE),
+		                        VIEW_NAME_HEADER_IMAGE),
 		                new Pair<View, String>(
 		                        view.findViewById(R.id.tvTitle),
-		                        SessionDetailActivity.VIEW_NAME_HEADER_TITLE)
+		                        VIEW_NAME_HEADER_TITLE)
 		        );
 
 		        // Now we can start the Activity, providing the activity options as a bundle

@@ -27,21 +27,24 @@ public class SessionDetailFragment extends Fragment {
 		ObjSession session = db.getSession(position);
 		
 		ProfileView pv = (ProfileView) convertView.findViewById(R.id.pvInstructor);
-		pv.setTransitionName(SessionDetailActivity.VIEW_NAME_HEADER_IMAGE);
+		pv.setTransitionName(SessionFragment.VIEW_NAME_HEADER_IMAGE);
 		
-        
 		pv.ivPhoto.setImageResource(Integer.valueOf(session.photo));
 		pv.tvName.setText(session.instructor);
 		
-		
 		TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
-		tvTitle.setTransitionName(SessionDetailActivity.VIEW_NAME_HEADER_TITLE);
+		tvTitle.setTransitionName(SessionFragment.VIEW_NAME_HEADER_TITLE);
         
 		
 		tvTitle.setText(session.title);
 		
 		TextView tvDescription = (TextView) convertView.findViewById(R.id.tvDescription);
 		tvDescription.setText(session.description);
+		
+		
+		
+		
+		
 		
 		return convertView;
 	}

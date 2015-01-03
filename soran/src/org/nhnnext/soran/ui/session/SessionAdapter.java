@@ -59,9 +59,6 @@ public class SessionAdapter extends BaseAdapter {
 		TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
 		tvTitle.setText(session.title);
 		
-		pv.setTransitionName("grid:image:" + position);
-		tvTitle.setTransitionName("grid:name:" + position);
-        
 		return convertView;
 	}
 

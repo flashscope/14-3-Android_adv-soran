@@ -13,11 +13,6 @@ import android.widget.TextView;
 
 public class SessionDetailActivity extends ActionBarActivity {
 
-    // View name of the header image. Used for activity scene transitions
-    public static final String VIEW_NAME_HEADER_IMAGE = "detail:header:image";
-
-    // View name of the header title. Used for activity scene transitions
-    public static final String VIEW_NAME_HEADER_TITLE = "detail:header:title";
     
 	private ActionBar mActionbar;
 	
@@ -25,14 +20,20 @@ public class SessionDetailActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.fragment_session_deatil);
+		//setContentView(R.layout.fragment_session_deatil);
 		
-		//setContentView(R.layout.activity_session_detail);
+		setContentView(R.layout.activity_session_detail);
 		
 		mActionbar = getSupportActionBar();
 		mActionbar.setIcon(R.drawable.ic_soran_actionbar);
 		mActionbar.setDisplayHomeAsUpEnabled(true);
 		
+		/*
+		 * 
+		 * 
+		 * setContentView(R.layout.fragment_session_deatil);
+		 * 
+		 * 
 		int position = 0;
 		if(getIntent() != null) {
 			position = getIntent().getIntExtra("position", 0);
@@ -41,7 +42,7 @@ public class SessionDetailActivity extends ActionBarActivity {
 		ObjSession session = db.getSession(position);
 		
 		ProfileView pv = (ProfileView) findViewById(R.id.pvInstructor);
-		pv.setTransitionName(VIEW_NAME_HEADER_IMAGE);
+		pv.setTransitionName(SessionFragment.VIEW_NAME_HEADER_IMAGE);
 		
         
 		pv.ivPhoto.setImageResource(Integer.valueOf(session.photo));
@@ -49,13 +50,14 @@ public class SessionDetailActivity extends ActionBarActivity {
 		
 		
 		TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
-		tvTitle.setTransitionName(VIEW_NAME_HEADER_TITLE);
+		tvTitle.setTransitionName(SessionFragment.VIEW_NAME_HEADER_TITLE);
         
 		
 		tvTitle.setText(session.title);
 		
 		TextView tvDescription = (TextView) findViewById(R.id.tvDescription);
 		tvDescription.setText(session.description);
+		*/
 	}
 	
 	@Override
